@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="https://qonaskamkuk.com/wp-content/uploads/2019/08/youtube-logo-1024x1024.png">
+    <title>YouTube</title>
+    <style>
+        
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        #navbar{
+            display: grid;
+            grid-template-columns: 20% 50% 11% 5% 10%;
+            background-color: white;
+            position: fixed;
+            font-size: xx-large;
+            padding: 5px;
+        }
+        .fa-bars{
+            font-size: 40px;
+            margin: none;
+            position: absolute;
+            top: 22px;
+        }
+        #query{
+            padding: 13px;
+            width: 89%;
+            font-size: 20px;
+            border: none;
+            padding-top: 20px;
+        }
+        input{
+            height: 70px;
+        }
+        #btn{
+            width: 10%;
+            padding: 25px;
+            border: none;
+            cursor: pointer;
+            font-weight: bolder;
+            font-size: 20px;
+        }
+        .fa-microphone{
+            margin-top: 18px;
+            margin-left: 20px;
+        }
+        .fa-ellipsis-v{
+            font-size: 40px;
+        }
+        #imagtg{
+            margin-top: 15px;
+            margin-left: 25px;
+        }#searchbar{
+            border: 1px solid #B0BEC5;
+        }
+        .fa-th{
+            font-size: 40px;
+            margin-top: 18px;
+        }
+        #sign{
+            display: flex;
+            border: 2px solid #42A5F5;
+            padding-top: 18px;
+            padding-left: 5px;
+            margin-left: 10px;
+        }
+        #movies{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 24% 24% 24% 24%;
+            grid-gap: 1%;
+            /* padding: 150px 10px 10px 150px; */
+            /* border: 1px solid tomato; */
+            padding-top: 150px;
+        }
+        #tags{
+            display: flex;
+            width: 88%;
+            margin-left: 8.5%;
+            border-top: 1px solid gray;
+            height: 50px;
+            margin-top: 5%;
+            margin-right: 2%;
+            padding: 5px;
+            position: absolute;
+        }
+        #tags > div
+        {
+            border: 1px solid gray;
+            border-radius: 20px;
+            padding: 9px;
+            margin-right: 15px;
+            cursor: pointer;
+            background-color: #ECEFF1;
+        }
+        #tags > :nth-child(15)
+        {
+            border: none;
+            background-color: white;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        #mainDD{
+            display: grid;
+            grid-template-columns: 8% 90%;
+
+        }
+        #sideicons{
+            width: 100%;
+            display: grid;
+            height: 300px;
+            grid-template-columns: 30% 69%;
+            grid-gap: 1%;
+            padding-top: 100px;
+        }
+        #sideicons> fa{
+            width: 200%;
+            color: black;
+        }
+        #sideicons>div,#sideicons>span {
+            padding-left: 9px;
+            padding-top: 9px;
+        }
+        #sideicons :hover{
+            background-color: #EFEBE9;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div><i class="fa fa-bars" aria-hidden="true"></i>&nbsp;
+           <!--- <i class="fa fa-youtube-play" aria-hidden="true"></i>-->
+        <img  href="index.html" src="https://sguru.org/wp-content/uploads/2018/02/2000px-YouTube_Logo_2017.svg_.png" id="imagtg" width="55%" alt=""></div>
+        <div id="searchbar">
+            
+        <input type="text" id = "query" placeholder="Search for a video"/>
+        <button onclick ="searchVideos()" id="btn"><i class="fa fa-search" aria-hidden="true"></i></button>
+        
+        </div>
+        <div>
+            <i class="fa fa-microphone" aria-hidden="true"></i>
+            
+        </div>
+        <div id="last">
+            <i class="fa fa-th" aria-hidden="true"></i> &ensp;
+            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+        </div>
+        <div id="sign">
+            <a href="signup.html"><i class="fa fa-user-circle" aria-hidden="true"></i></a>&nbsp;&nbsp;
+            <p id="userName">  Signin </p>
+        </div>
+    </div>
+    <div id="tags">
+        <div>All</div>&nbsp;
+        <div>Comedy</div>
+        <div>Pooja Hedge</div>
+        <div>Kohli</div>
+        <div>Csk</div>
+        <div>Pubg</div>
+        <div>Dsa</div>
+        <div>Web Development</div>
+        <div>Naga Chaitanya</div>
+        <div>Cricket</div>
+        <div>A.R.Rahman</div>
+        <div>Swanand Kadam</div>
+        <div>JavaScript</div>
+        <div>Recursion</div>
+        &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+        <div id="no"> <i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+    </div>
+    <div id="mainDD">
+        <div id="sideicons">
+            <div>
+                <span class="material-icons">home</span></i>
+            </div>
+            <div>
+                Home
+            </div>
+            <div><span class="material-icons">explore</span></div><div>Explore</div>
+            <div><span class="material-icons">
+                subscriptions
+                </span></div><div>Subscriptions</div>
+           <div><span class="material-icons">
+            video_library
+            </span></div>
+                <div>Library</div>
+        </div>
+
+    <div id="movies"></div>
+
+    </div>
+    </div>
+</body>
+</html>
+<script>
+
+    var Uname = document.getElementById('userName');
+    var dta = JSON.parse(localStorage.getItem('data'));
+    var dtaa = JSON.parse(dta);
+    console.log('data0',dtaa)
+    if(dtaa == null)
+    {
+        Uname.textContent="Sign Up";
+    }else
+    {
+        Uname.textContent=dtaa.name;
+    }
+    //Uname.textContent=dta.username;
+    let parent = document.getElementById('movies');
+    async function getVideos()
+    {
+
+    //var query = document.getElementById('query').value;
+        let res = await fetch
+        (`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=IN&key=AIzaSyDU699faiwdFwLpcWGeWVS3aMgvvdRf1w0&maxResults=20`);
+        //console.log(res.json())
+
+        var data = await res.json();
+        console.log("data",data)
+        var ress = data.items
+      appendMovies(ress);
+    }
+    getVideos()
+    function appendMovies(ress)
+    {   
+        console.log("resss",ress);
+
+        ress.forEach((res)=>{
+            let div = document.createElement('div');
+            div.innerHTML=`<iframe width="100%" height="240px" src="https://www.youtube.com/embed/${res.id}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+            parent.append(div)
+        
+        })
+
+
+    }
+    async function searchVideos()
+    {
+
+    var query = document.getElementById('query').value;
+        let res = await fetch
+        (`https://youtube.googleapis.com/youtube/v3/search?q=${query}&type=video&key=AIzaSyDU699faiwdFwLpcWGeWVS3aMgvvdRf1w0&maxResults=20`);
+        //console.log(res.json())
+
+        var data = await res.json();
+        console.log("data",data)
+       appendVideos(data.items)
+    }
+    //searchVideos();
+
+    //var parent = document.getElementById('videos');
+
+    function appendVideos(video_data){
+        parent.innerHTML=null;
+        video_data.forEach(({id:{videoId}})=>{
+        //console.log("video",videoId)
+        let div = document.createElement('div');
+
+        div.innerHTML = `<iframe width="100%" height="315px" src="https://www.youtube.com/embed/${videoId}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+    
+         parent.append(div);
+    })
+
+    }
+
+</script>
